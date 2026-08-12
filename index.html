@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Registration</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style> 
+   /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #80deea);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+
+/* Form Container */
+form {
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  animation: slideFadeIn 0.6s ease-out;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  width: 40%;
+  font-weight: 500;
+  color: #333;
+  text-align: right;
+  padding-right: 12px;
+}
+
+.form-group input {
+  width: 60%;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f4faff;
+  transition: border-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus {
+  border-color: #00796b;
+  box-shadow: 0 0 0 3px rgba(0, 121, 107, 0.2);
+  outline: none;
+}
+
+button[type="submit"] {
+  margin-top: 24px;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #00796b;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #004d40;
+}
+
+
+/* Labels */
+label {
+  display: block;
+  margin: 14px 0 5px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f4faff;
+  transition: border-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+input:focus {
+  border-color: #00796b;
+  box-shadow: 0 0 0 3px rgba(0, 121, 107, 0.2);
+  outline: none;
+}
+
+/* Error messages */
+.error {
+  color: #d32f2f;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+/* Animation */
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  form {
+    padding: 24px 20px;
+  }
+
+  form h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <center>
+  <form id="registrationForm" novalidate>
+    <h2>User Registration</h2>
+
+    <label>Full Name:</label>
+    <input type="text" id="name" required>
+    <span class="error" id="nameError"></span>
+
+    <label>Email:</label>
+    <input type="email" id="email" required>
+    <span class="error" id="emailError"></span>
+
+    <label>Phone:</label>
+    <input type="tel" id="phone" pattern="[0-9]{10}" required>
+    <span class="error" id="phoneError"></span>
+
+    <label>Date of Birth:</label>
+    <input type="date" id="dob" required>
+    <span class="error" id="dobError"></span>
+
+    <label>Password:</label>
+    <input type="password" id="password" required>
+    <span class="error" id="passwordError"></span>
+
+    <label>Confirm Password:</label>
+    <input type="password" id="confirmPassword" required>
+    <span class="error" id="confirmPasswordError"></span>
+
+    <button type="submit">Register</button>
+  </form>
+  </center>
+  <script src="script.js"></script>
+</body>
+</html>
+
