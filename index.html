@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practical 3</title>
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Global Page Styles */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .practical-section {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1f2937;
+      margin-top: 0;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e5e7eb;
+    }
+
+    /* ----------------------------------------------------------------
+       SECTION 1: CSS GRID STYLES
+       ---------------------------------------------------------------- */
+    .grid-container {
+      display: grid;
+      /* Auto-fit creates columns that wrap based on min width */
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .grid-card {
+      background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+      color: white;
+      padding: 24px;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    /* ----------------------------------------------------------------
+       SECTION 2: FLEXBOX STYLES
+       ---------------------------------------------------------------- */
+    .flex-navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1e293b;
+      padding: 14px 24px;
+      border-radius: 8px;
+      color: white;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .flex-logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .flex-nav-links {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 20px;
+    }
+
+    .flex-nav-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .flex-nav-links a:hover {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align: center; color: #111827; margin-bottom: 30px;">
+    Practical Submission: Practical 3
+  </h1>
+
+  <!-- ================================================================
+       BLOCK 1: CSS GRID
+       ================================================================ -->
+  <section class="practical-section">
+    <h2 class="section-title">Block 1: CSS Grid</h2>
+    <div class="grid-container">
+      <div class="grid-card">Grid Item 1</div>
+      <div class="grid-card">Grid Item 2</div>
+      <div class="grid-card">Grid Item 3</div>
+      <div class="grid-card">Grid Item 4</div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       BLOCK 2: FLEXBOX
+       ================================================================ -->
+  <section class="practical-section">
+    <h2 class="section-title">Block 2: Flexbox</h2>
+    <nav class="flex-navbar">
+      <div class="flex-logo">FlexLogo</div>
+      <ul class="flex-nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <!-- ================================================================
+       BLOCK 3: TAILWIND CSS
+       ================================================================ -->
+  <section class="practical-section">
+    <h2 class="section-title">Block 3: Tailwind CSS</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-teal-600 text-white p-6 rounded-lg shadow-sm">
+        <h3 class="text-lg font-bold mb-2">Responsive Card 1</h3>
+        <p class="text-teal-100 text-sm">Uses Tailwind utilities for layout, colors, and shadows.</p>
+      </div>
+      <div class="bg-teal-700 text-white p-6 rounded-lg shadow-sm">
+        <h3 class="text-lg font-bold mb-2">Responsive Card 2</h3>
+        <p class="text-teal-100 text-sm">Automatically stacks on mobile screens (1 column).</p>
+      </div>
+      <div class="bg-teal-800 text-white p-6 rounded-lg shadow-sm">
+        <h3 class="text-lg font-bold mb-2">Responsive Card 3</h3>
+        <p class="text-teal-100 text-sm">Expands to 3 columns on medium screens and larger.</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
