@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHARUSAT Practical: 3</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .header-container {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .practical-block {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .block-title {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #1a365d;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+    }
+
+    /* ----------------------------------------------------------------
+       BLOCK 1: CSS GRID
+       ---------------------------------------------------------------- */
+    .grid-dashboard {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .grid-card {
+      background-color: #2b6cb0;
+      color: white;
+      padding: 20px;
+      border-radius: 6px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    /* ----------------------------------------------------------------
+       BLOCK 2: FLEXBOX
+       ---------------------------------------------------------------- */
+    .flex-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1a202c;
+      padding: 12px 20px;
+      border-radius: 6px;
+      color: white;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .flex-nav-links {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 15px;
+    }
+
+    .flex-nav-links a {
+      color: #cbd5e0;
+      text-decoration: none;
+    }
+
+    .flex-nav-links a:hover {
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header-container">
+    <h1 style="color: #2d3748; margin-bottom: 5px;">CHARUSAT Student Portal</h1>
+    <h3 style="color: #4a5568; margin-top: 0;">Practical Submission: Responsive UI Design</h3>
+  </div>
+
+  <!-- BLOCK 1: CSS GRID -->
+  <div class="practical-block">
+    <div class="block-title">Block 1: CSS Grid (Dashboard Features)</div>
+    <div class="grid-dashboard">
+      <div class="grid-card">My Profile</div>
+      <div class="grid-card">My Courses</div>
+      <div class="grid-card">Registration</div>
+      <div class="grid-card">Grades</div>
+      <div class="grid-card">Announcements</div>
+      <div class="grid-card">Faculty Feedback</div>
+    </div>
+  </div>
+
+  <!-- BLOCK 2: FLEXBOX -->
+  <div class="practical-block">
+    <div class="block-title">Block 2: Flexbox (Navigation Bar)</div>
+    <nav class="flex-nav">
+      <div style="font-weight: bold; font-size: 1.1rem;">CHARUSAT Portal</div>
+      <ul class="flex-nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Grades</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- BLOCK 3: TAILWIND CSS -->
+  <div class="practical-block">
+    <div class="block-title">Block 3: Tailwind CSS (Responsive Cards)</div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="bg-indigo-600 text-white p-5 rounded-lg shadow">
+        <h4 class="font-bold text-lg mb-2">Student Info</h4>
+        <p class="text-indigo-100 text-sm">Access academic record and profile information seamlessly.</p>
+      </div>
+      <div class="bg-indigo-700 text-white p-5 rounded-lg shadow">
+        <h4 class="font-bold text-lg mb-2">Course Status</h4>
+        <p class="text-indigo-100 text-sm">Check registered subjects, attendance, and exam details.</p>
+      </div>
+      <div class="bg-indigo-800 text-white p-5 rounded-lg shadow">
+        <h4 class="font-bold text-lg mb-2">Notice Board</h4>
+        <p class="text-indigo-100 text-sm">View real-time updates directly from university administration.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer style="text-align: center; color: #718096; font-size: 0.9rem; margin-top: 20px;">
+    &copy; 2026 CHARUSAT University. All rights reserved.
+  </footer>
+
+</body>
+</html>
